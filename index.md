@@ -10,3 +10,4 @@ the most recent article at the time of merging.
 
 Year | Author | Title
 --- | --- | ---
+2020 | lkingsford | [The 'Whats' and 'Whys' of Automated Testing](articles/2020-lkingsford_the_whats_and_whys_of_automated_testing.md)
