@@ -29,7 +29,7 @@ help teams productively make cool things.
 
 Let's get this show on the road!
 
-## The 'whats' of Automated Testing
+## The 'Whats' of Automated Testing
 
 You know that thing we do as software engineers where we write code, so a
 computer will do a tedious or complicated task so a person doesn't waste time
@@ -37,9 +37,9 @@ having to do it themselves, manually? It's that! But the person is you, and the
 task is checking that your code does what it is supposed to.
 
 There's lots of types of automated testing, and a few different ways we can use
-it. I'm going to give a quick overview of them. Feel free to skip this part if
-you've heard it before. We're also not going to cover all of these in detail -
-but they're things you're going to see around, that it's helpful to understand.
+it. I'm going to give a quick overview of them. We're also not going to cover
+all of these in detail - but they're things you're going to see around, that
+it's helpful to understand.
 
 ### Automated testing
 
@@ -61,8 +61,8 @@ Tests that test the codebase in a more complete way. Integration tests will
 often rely on a development database\*, or third party APIs - preferably in a
 development mode. They test how the codebase fits together. To use an analogy -
 if your unit test for building a car tests the wheel can spin, then an
-integration test might include whether the wheel spins after turning the car
-on, putting it in first, and pushing the accelerator.
+integration test might include whether the wheel spins when the engine is
+running and the car is in gear.
 
 > \* Yes, your integration tests should run on a development database, not your
 > production database. In fact - why are you connected to prod at all with your
@@ -95,7 +95,7 @@ I'm a bit more pragmatic. I think writing tests first is *sometimes* helpful.
 For instance, often if I'm implementing an API - I'll write a basic test of
 an ordinary use case before implementing it, or if I'm trying to fix a bug,
 I'll write a test of what the correct behavior is so I can watch it break. I
-treat TDD as a tool to use like a hammer, not as something that must be adhered
+treat TDD as a tool to use like a hammer - not as something that must be adhered
 to religiously.
 
 ### Continuous Integration
@@ -108,6 +108,12 @@ merge it into master unless it has automatically run the tests on your code.
 That in essence in Continuous Integration. It's something useful that Automated
 Tests enable, that I'll talk about in a lot more detail in a later article,
 because it's a big subject by itself.
+
+If you're in a particularly excitable mood, you can extend this further into
+Continuous Deployment where you have a system that automatically deploys any
+code merged into master that has passed its automated tests. I'm not going to
+go into detail about how to implement Continuous Deployment, or whether it's a
+good idea for your project or team.
 
 ## Why automated testing?
 
