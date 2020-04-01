@@ -6,5 +6,5 @@ GitHub viewer, and we can't guarantee the length of any section -->
 
 Year | Author | Title
 --- | --- | ---
-2020 | lkingsford | [What 'Whats' and 'Whys' of Automated Testing](articles/2020-lkingsford_the_whats_and_whys_of_automated_testing.md)
+2020 | lkingsford | [The 'Whats' and 'Whys' of Automated Testing](articles/2020-lkingsford_the_whats_and_whys_of_automated_testing.md)
 2020 | lkingsford | [Writing Unit Tests with Pytest](articles/2020-lkingsford_writing_unit_tests_with_pytest.md)
