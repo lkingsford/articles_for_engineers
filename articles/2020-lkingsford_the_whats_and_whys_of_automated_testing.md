@@ -98,7 +98,7 @@ I'll write a test of what the correct behavior is so I can watch it break. I
 treat TDD as a tool to use like a hammer - not as something that must be adhered
 to religiously.
 
-### Continuous Integration
+### Continuous integration
 
 Imagine you had automated tests. Now imagine that every time you push that code
 to master, or create a pull request, it builds your code (if your language
@@ -115,6 +115,20 @@ code merged into master that has passed its automated tests. I'm not going to
 go into detail about how to implement Continuous Deployment, or whether it's a
 good idea for your project or team.
 
+### Test coverage
+
+Test coverage (or 'code coverage') is the amount of your code base that has
+automated testing applied to it against the total size of your code base. A
+code base that has 80% test coverage would have 80% of its lines of code run
+during at least one test. Most unit testing tools and frameworks (like Pytest)
+offer a way to calculate your test coverage.
+
+Some teams aim for 100% test coverage. This is admirable, but again - I'm a
+little more pragmatic. I would suggest that automated testing can have
+diminishing returns. Personally, my preference remains to calculate test
+coverage as a useful metric, but focus more heavily on whether specifications
+are being tested than trying to achieve a specific number.
+
 ## Why automated testing?
 
 Automated testing has a few obvious and less obvious benefits.
@@ -125,6 +139,10 @@ Programmers make mistakes. When we're lucky, we find those mistakes before
 users do. You can manually test, but manually testing all the types of input
 might be difficult or time consuming. Having automated tests can prove each
 part of your code works, before a user proves that it doesn't.
+
+When you're working in a team environment, it can also assist your team in
+verifying that your new code works before it is merged into your Master branch -
+particularly if you're using Continuous Integration.
 
 ### It can help you make sure that new code doesn't break old code
 
@@ -146,11 +164,22 @@ I hinted at this earlier, but a great way to figure out a bug is to write a
 test for the correct behavior - which will naturally fail, but gives you a way
 to either step through the code, or see exactly *how* the code is failing.
 
+Having thorough unit tests will also verify which parts of the code still pass
+unit tests, and therefore are not effected by the bug. Knowing what still works
+can sometimes be just as helpful as knowing what is broken.
+
 ### It can help you write more understandable code
 
 I'll discuss this in a later article, but writing your code in a way that is
 easy to test encourages you to write small, well defined, understandable
-functions.
+functions. It also discourages you from relying on:
+
+    * Side effects
+    * Implicit behaviour in the functions you call
+    * Over-reliance on global or object state
+    * Tight coupling between objects
+
+as these all make writing unit tests (and other automated tests) more difficult.
 
 ## What's next?
 
