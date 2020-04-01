@@ -6,14 +6,15 @@ works is code that you've deleted. As nice as it would be to make a career out
 of deleting things, as software engineers, we do need to write new code. And, if
 we want to be good at our jobs, that code should work and keep working.
 
-This article is for new software engineers who haven't yet spent much time doing
-testing, and for experienced engineers who would like to either brush up on the
-basics or introduce testing to a new environment. It's going to be at a fairly
-beginner level - but, it's my intention to go into a bit more specific technical
-depth in future articles over the next few weeks.
+This is the first article in a series I'm going to be writing on automated
+testing. Later articles are going to have an emphasis on testing with Pytest in
+Python, but will hopefully still be valuable for engineers who work in other
+languages. Lots of the principles are fairly universal.
 
-I'm going to give a few small code examples in Python, but pretty much all of
-the principles can be applied in whatever language you prefer.
+I'm starting from absolute scratch. This article introduces some of the
+terminology around automated testing, and suggests some reasons why you might
+get benefit from automated testing. Later articles will go into specific details
+on how to add automated testing to your projects.
 
 Before we start, a quick introduction: Hi. I'm Lachlan Kingsford. I'm a
 software engineer with 5 years of experience. I've worked on the front and back
@@ -141,5 +142,12 @@ to either step through the code, or see exactly *how* the code is failing.
 
 ### It can help you write more understandable code
 
-I'll discuss this in this article, but writing your code in a way that is easy
-to test encourages you to write small, well defined, understandable functions.
+I'll discuss this in a later article, but writing your code in a way that is
+easy to test encourages you to write small, well defined, understandable
+functions.
+
+## What's next?
+
+So, in my next article, I'm going to help you get started with Pytest. We're
+going to set it up, write a unit test together, and then explore one of the
+tools that Pytest offers: Parametrization.
