@@ -2,7 +2,11 @@ List of articles
 ================
 
 <!-- I know this is ugly when viewing raw, but it works as a table in the
-GitHub viewer, and we can't guarantee the length of any section -->
+GitHub viewer, and we can't guarantee the length of any section 
+
+These articles are in reverse chronological order. Put new articles on top of
+the most recent article at the time of merging.
+-->
 
 Year | Author | Title
 --- | --- | ---
