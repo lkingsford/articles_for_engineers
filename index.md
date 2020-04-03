@@ -10,5 +10,6 @@ the most recent article at the time of merging.
 
 Year | Author | Title
 --- | --- | ---
+2020 | lkingsford | [Adding testing to legacy code](articles/2020-lkingsford_adding-testing-to-legacy-code.md)
 2020 | lkingsford | [Writing your first unit test with Pytest](articles/2020-lkingsford_writing-your-first-unit-test-with-pytest.md)
 2020 | lkingsford | [The 'Whats' and 'Whys' of Automated Testing](articles/2020-lkingsford_the_whats_and_whys_of_automated_testing.md)
