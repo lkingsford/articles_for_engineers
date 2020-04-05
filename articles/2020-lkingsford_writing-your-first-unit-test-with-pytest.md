@@ -42,8 +42,10 @@ for them.
 - Go into your terminal, and navigate to the folder
 - Create a virtual environment in a folder called `env` by running
   `python3 -m venv env` in your terminal
-- Activate the virtual environment by running ` in your
-  terminal
+
+> **A note about Debian and Ubuntu**
+> The `venv` module isn't installed by default in Debian or Ubuntu. You'll need
+> to install it by runnning: `sudo apt install python3-venv`.
 
 #### Activating the environment
 
@@ -321,10 +323,10 @@ import models.user
 
 
 TEST_DISPLAY_NAME_DATA = [
-    ['username', None,None, 'username'],
-    ['username', 'real_name', None, 'real_name'],
-    ['username', 'real_name', 'preferred_name', 'preferred_name'],
-    ['username', None, 'preferred_name', 'preferred_name'],
+    ('username', None, None, 'username'),
+    ('username', 'real_name', None, 'real_name'),
+    ('username', 'real_name', 'preferred_name', 'preferred_name'),
+    ('username', None, 'preferred_name', 'preferred_name'),
 ]
 
 @pytest.mark.parametrize("username,real_name,preferred_name,expected", TEST_DISPLAY_NAME_DATA)
