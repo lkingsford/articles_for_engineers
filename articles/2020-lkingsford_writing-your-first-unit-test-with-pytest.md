@@ -25,10 +25,50 @@ in Python's standard library - as it provides some useful out-of-the-box
 features (like parametization), and I find the way that it structures tests
 to be more intuitive.
 
-I assume that you're using, and have activated a [virtual environment](https://docs.python.org/3/library/venv.html).
+### Setting up a virtual environment
+
+For this tutorial, we need to work with a [virtual environment](https://docs.python.org/3/library/venv.html).
+
+If you already know how to set up and activate a virtual environment, skip this
+section.
+
 Using a virtual environment is an easy way to separate the projects that you
 are working on, and the - potentially clashing - pip packages that are required
 for them.
+
+#### Creating the environment
+
+- If you haven't already, create a folder for your project
+- Go into your terminal, and navigate to the folder
+- Create a virtual environment in a folder called `env` by running
+  `python3 -m venv env` in your terminal
+- Activate the virtual environment by running ` in your
+  terminal
+
+#### Activating the environment
+
+This is one thing that differs a little bit depending on your OS and shell.
+This is how you activate in some of the more common shells.
+
+- **On Linux/Unix/MacOS with `sh` or compatible:** run
+  `source env/bin/activate` in your shell
+- **On Windows with `cmd`:** run `source env/scripts/activate.bat` in your
+  terminal
+- **On Windows with Powershell:** run `source env/scripts/activate.ps1` in
+  Powershell
+
+> **A note about Powershell and permissions**
+>
+> One way that Microsoft increased the safety of Powershell over `cmd` is by
+> limiting what scripts you are able to run. If you haven't done so, you'll
+> need to set a new execution policy. You can find [Microsoft's documentation on what this does here.](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7)
+> You need to set it to `RemoteSigned` to run the virtual environment. Do this
+> by starting Powershell in Administrator Mode (by right clicking it in the
+> Start menu, and choosing 'Run as Administrator') and then running the command
+> `Set-ExecutionPolicy RemoteSigned`.
+
+
+### Installing Pytest with `pip`
 
 To install Pytest using pip, run the command `pip install pytest`.
 
