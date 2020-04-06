@@ -157,13 +157,13 @@ We're going to start by testing that when we have a user with a `username`,
 Put the following in `project_folder/tests/test_user.py`:
 
 ```python
-import project_folder.models.user
+import models.user
 
-def test_get_display_name(self):
+def test_get_display_name():
     # GIVEN a User with a username, real name, and preferred name
     user = models.user.User("username", "real name", "preferred")
-    # WHEN User.display_name is run
-    display_name = user.get_displayed_name()
+    # WHEN User.get_display_name is run
+    display_name = user.get_display_name()
     # THEN it returns the preferred name
     assert display_name == "preferred", "Display name should have returned preferred name"
 ```
@@ -214,17 +214,17 @@ Now - let's break it again, for learnings sake. Change `User.get_display_name`
 in `models/user.py` to be the following:
 
 ```python
-    def get_display_name(self):
-        """Return the name to display for this user.
+def get_display_name(self):
+    """Return the name to display for this user.
 
-        The users display name is their preferred_name if it is set,
-        if not, their real_name if it is set, alternatively, if not,
-        their username"""
-        return self.username
-        if self.preferred_name:
-            return self.preferred_name
-        if self.real_name:
-            return self.real_name
+    The users display name is their preferred_name if it is set,
+    if not, their real_name if it is set, alternatively, if not,
+    their username"""
+    return self.username
+    if self.preferred_name:
+        return self.preferred_name
+    if self.real_name:
+        return self.real_name
 ```
 
 The enthusiastic coder may have already noted that this will always return the
@@ -344,9 +344,9 @@ as one that uses parametrization. The first parameter (`"username,real_name,pref
 is a list of the parameters on the test function to fill in. The second
 parameter is the actual data source.
 
-The data source in this case is `TEST_DISPLAY_NAME_DATA`. It's a list of lists.
-Each item in the list is one of the test cases. Each item in those lists is one
-of the parameters to fill in.
+The data source in this case is `TEST_DISPLAY_NAME_DATA`. It's a list of tuples.
+Each item in the list is one of the test cases. Each item in those tuples is
+one of the parameters to fill in.
 
 It's quite common to have a field like `expected`, because often you're testing
 for specific output for each input value. Sometimes you may not need it - for
