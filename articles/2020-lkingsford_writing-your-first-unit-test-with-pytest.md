@@ -309,7 +309,7 @@ Lots of testing frameworks - including Pytest - support a feature called
 'parametrization'. This means that can get data from an iterator and run a
 test with that data
 
-> Yes, you can use generators - as your can use any iterators. It's outside the
+> Yes, you can use generators - as you can use any iterators. It's outside the
 > scope of this article to discuss exactly how. The official documentation for
 > Pytest has a [pretty in-depth look at how you can use parametrization](http://doc.pytest.org/en/latest/example/parametrize.html)
 > that is worth a read.
